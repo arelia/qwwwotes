@@ -1,0 +1,31 @@
+<h1>Qwwotes</h1>
+<p>Sage advice from web dev experts.</p>
+
+<h1>Listing Qwwwotes</h1>
+
+  <% @qwwwotes.each do |qwwwote| %>
+    Quote: <%= qwwwote.quote %><br>
+
+    Author: <%= qwwwote.author %><br>
+
+    Source: <%= qwwwote.source %><br>
+
+    URL: <%= qwwwote.source_url %><br>
+
+    Date: <%= qwwwote.date %><br>
+
+    Tags: <%= qwwwote.tags %><br>
+
+    Notes: <%= qwwwote.notes %><br>
+
+    <%= link_to 'Show this qwwwote', qwwwote_path(qwwwote) %>
+
+    <%= link_to 'Edit this qwwwote', edit_qwwwote_path(qwwwote) %>
+
+    <%= link_to 'Delete this qwwwote', qwwwote_path(qwwwote),
+              method: :delete,
+              data: { confirm: 'Noooooooooooooooooos. Unless you really want to:' } %>
+
+    <hr>
+  <% end %>
+<%= link_to 'Add a qwwwote!', new_qwwwote_path %>

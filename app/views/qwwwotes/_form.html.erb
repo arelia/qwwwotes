@@ -1,0 +1,46 @@
+<%= form_for @qwwwote do |f| %>
+  <% if @qwwwote.errors.any? %>
+    <div id='error_explanation'>
+      <h2>
+        <%= pluralize(@qwwwote.errors.count, 'error') %>
+        prohibited this qwwwote from being saved:
+      </h2>
+      <ul>
+        <% @qwwwote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :quote %><br>
+    <%= f.text_area :quote %>
+  </p>
+  <p>
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label :source_url %><br>
+    <%= f.url_field :source_url %>
+  </p>
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
+  </p>
+  <p>
+    <%= f.label :tags %><br>
+    <%= f.text_field :tags %>
+  </p>
+  <p>
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

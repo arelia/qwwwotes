@@ -1,0 +1,13 @@
+<h1>A Qwwwote</h1>
+
+Quote: <%= @qwwwote.quote %><br>
+Author: <%= @qwwwote.author %><br>
+Source: <%= @qwwwote.source %><br>
+URL: <%= @qwwwote.source_url %><br>
+Date: <%= @qwwwote.date %><br>
+Tages: <%= @qwwwote.tags %><br>
+Notes: <%= @qwwwote.notes %><br><br>
+
+<%= link_to 'Edit this qwwwote', edit_qwwwote_path(@qwwwote) %><br><br>
+
+<%= link_to 'Back to the list of Qwwwotes', qwwwotes_path %>
