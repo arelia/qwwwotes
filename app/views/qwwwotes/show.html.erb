@@ -8,6 +8,18 @@ Date: <%= @qwwwote.date %><br>
 Tages: <%= @qwwwote.tags %><br>
 Notes: <%= @qwwwote.notes %><br><br>
 
+<h2>Add a tag:</h2>
+<%= form_for([@qwwwote, @qwwwote.tags.build]) do |f| %>
+
+  <p>
+    <%= f.label :tag %><br>
+    <%= f.text_field :tag %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit this qwwwote', edit_qwwwote_path(@qwwwote) %><br><br>
 
 <%= link_to 'Back to the list of Qwwwotes', qwwwotes_path %>
